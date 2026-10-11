@@ -1,0 +1,18 @@
+{
+  "name": "alert",
+  "titleAr": "تنبيه",
+  "titleEn": "Alert",
+  "descriptionAr": "تنبيهات دلالية بأيقونة تلقائية (نجاح/تحذير/خطأ/معلومة).",
+  "category": "ui",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/alert.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\";\n\n<Alert variant=\"success\">\n  <AlertTitle>تم الحفظ بنجاح</AlertTitle>\n  <AlertDescription>تم تحديث بيانات العميل.</AlertDescription>\n</Alert>",
+  "prompt": "أضف تنبيهًا عربيًا: انسخ src/components/ui/alert.tsx. اختر variant حسب الدلالة. الأيقونة تُرسم تلقائيًا."
+}

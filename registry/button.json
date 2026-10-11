@@ -1,0 +1,19 @@
+{
+  "name": "button",
+  "titleAr": "زر",
+  "titleEn": "Button",
+  "descriptionAr": "زر shadcn بستة أنواع وأربعة أحجام — آمن للعربية، الأيقونات عبر gap تنعكس تلقائيًا في RTL.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/button.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Button } from \"@/components/ui/button\";\nimport { ArrowLeft } from \"lucide-react\";\n\nexport default function Example() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button>حفظ التغييرات</Button>\n      <Button variant=\"outline\">عرض <ArrowLeft className=\"flip-rtl size-4\" /></Button>\n      <Button variant=\"destructive\">حذف</Button>\n    </div>\n  );\n}",
+  "prompt": "أضف زر titans-modern-ui: انسخ src/components/ui/button.tsx. استخدم variant من default/secondary/outline/ghost/destructive/link. الأيقونات الاتجاهية أضف flip-rtl. لا تستخدم ml/mr — اعتمد gap."
+}

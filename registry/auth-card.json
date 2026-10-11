@@ -1,0 +1,20 @@
+{
+  "name": "auth-card",
+  "titleAr": "بطاقة تسجيل دخول",
+  "titleEn": "Auth Card",
+  "descriptionAr": "حاوية مصادقة ممركزة (دخول/تسجيل/OTP) — ضع <form> داخلها.",
+  "category": "titans",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/titans/auth-card.tsx",
+      "type": "component"
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { AuthCard } from \"@/components/titans/auth-card\";\nimport { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\n\n<AuthCard title=\"تسجيل الدخول\" description=\"مرحبًا بعودتك\" logo=\"T\">\n  <Input placeholder=\"البريد الإلكتروني\" />\n  <Input type=\"password\" placeholder=\"كلمة المرور\" />\n  <Button className=\"w-full\">دخول</Button>\n</AuthCard>",
+  "prompt": "ابنِ شاشة دخول: انسخ auth-card + card + input + button. ضع الحقول داخل AuthCard children."
+}

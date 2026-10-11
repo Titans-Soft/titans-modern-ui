@@ -1,0 +1,16 @@
+{
+  "name": "badge",
+  "titleAr": "شارة حالة",
+  "titleEn": "Badge",
+  "descriptionAr": "شارات الحالات (مدفوع/مسودة/متأخر) بألوان دلالية فاتح/داكن.",
+  "category": "ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/badge.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Badge } from \"@/components/ui/badge\";\n\n<div className=\"flex gap-2\">\n  <Badge variant=\"success\">مدفوع</Badge>\n  <Badge variant=\"warning\">قيد المراجعة</Badge>\n  <Badge variant=\"destructive\">متأخر</Badge>\n</div>",
+  "prompt": "استخدم Badge للحالات: success=مدفوع/نشط، warning=قيد المراجعة، destructive=متأخر/محذوف. انسخ src/components/ui/badge.tsx."
+}

@@ -1,0 +1,241 @@
+{
+  "$schema": "https://titansoft.eg/schemas/titans-registry.json",
+  "name": "titans-modern-ui",
+  "org": "Titansoft (Titans-Soft)",
+  "direction": "rtl",
+  "locale": "ar",
+  "style": "shadcn/new-york",
+  "docs": "/components",
+  "items": [
+    {
+      "name": "button",
+      "titleAr": "زر",
+      "titleEn": "Button",
+      "descriptionAr": "زر shadcn بستة أنواع وأربعة أحجام — آمن للعربية، الأيقونات عبر gap تنعكس تلقائيًا في RTL.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "files": [{ "path": "src/components/ui/button.tsx", "type": "component" }],
+      "usage": "import { Button } from \"@/components/ui/button\";\nimport { ArrowLeft } from \"lucide-react\";\n\nexport default function Example() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button>حفظ التغييرات</Button>\n      <Button variant=\"outline\">عرض <ArrowLeft className=\"flip-rtl size-4\" /></Button>\n      <Button variant=\"destructive\">حذف</Button>\n    </div>\n  );\n}",
+      "prompt": "أضف زر titans-modern-ui: انسخ src/components/ui/button.tsx. استخدم variant من default/secondary/outline/ghost/destructive/link. الأيقونات الاتجاهية أضف flip-rtl. لا تستخدم ml/mr — اعتمد gap."
+    },
+    {
+      "name": "input",
+      "titleAr": "حقل إدخال",
+      "titleEn": "Input",
+      "descriptionAr": "حقل نصي RTL-native — العربي يمين تلقائيًا، واللاتيني (إيميل) أضف dir=\"ltr\".",
+      "category": "ui",
+      "dependencies": [],
+      "files": [{ "path": "src/components/ui/input.tsx", "type": "component" }],
+      "usage": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"space-y-1.5\">\n  <Label>الاسم الكامل</Label>\n  <Input placeholder=\"مثال: أحمد محمود\" />\n</div>\n<div className=\"space-y-1.5\">\n  <Label>البريد الإلكتروني</Label>\n  <Input dir=\"ltr\" className=\"text-left\" placeholder=\"name@titansoft.eg\" />\n</div>",
+      "prompt": "أضف حقل input عربي: انسخ src/components/ui/input.tsx. الحقول العربية بدون dir إضافي (ترث rtl). حقول الإيميل/الروابط أضف dir=\"ltr\" className=\"text-left\". اربط كل حقل بـ Label عبر htmlFor."
+    },
+    {
+      "name": "textarea",
+      "titleAr": "منطقة نصية",
+      "titleEn": "Textarea",
+      "descriptionAr": "حقل نص متعدد الأسطر للملاحظات والوصف بالعربية.",
+      "category": "ui",
+      "dependencies": [],
+      "files": [{ "path": "src/components/ui/textarea.tsx", "type": "component" }],
+      "usage": "import { Textarea } from \"@/components/ui/textarea\";\n\n<Textarea placeholder=\"اكتب ملاحظاتك هنا…\" />",
+      "prompt": "أضف textarea عربي: انسخ src/components/ui/textarea.tsx. نفس قواعد input للاتجاه."
+    },
+    {
+      "name": "label",
+      "titleAr": "تسمية حقل",
+      "titleEn": "Label",
+      "descriptionAr": "تسمية Radix تربط الحقول بـ htmlFor — أساس نماذج عربية ميسّرة.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-label"],
+      "files": [{ "path": "src/components/ui/label.tsx", "type": "component" }],
+      "usage": "import { Label } from \"@/components/ui/label\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\n\n<div className=\"flex items-center gap-2\">\n  <Checkbox id=\"terms\" />\n  <Label htmlFor=\"terms\">أوافق على الشروط والأحكام</Label>\n</div>",
+      "prompt": "استخدم Label مع كل input عبر htmlFor/id. انسخ src/components/ui/label.tsx."
+    },
+    {
+      "name": "card",
+      "titleAr": "بطاقة",
+      "titleEn": "Card",
+      "descriptionAr": "حاوية shadcn (Header/Title/Description/Content/Footer) — لبنة النماذج ولوحات العرض.",
+      "category": "ui",
+      "dependencies": [],
+      "files": [{ "path": "src/components/ui/card.tsx", "type": "component" }],
+      "usage": "import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Input } from \"@/components/ui/input\";\nimport { Button } from \"@/components/ui/button\";\n\n<Card className=\"max-w-sm\">\n  <CardHeader>\n    <CardTitle>تسجيل الدخول</CardTitle>\n    <CardDescription>أدخل بياناتك للمتابعة</CardDescription>\n  </CardHeader>\n  <CardContent className=\"space-y-3\">\n    <Input placeholder=\"البريد الإلكتروني\" />\n    <Button className=\"w-full\">دخول</Button>\n  </CardContent>\n</Card>",
+      "prompt": "ابنِ بطاقة عربية: انسخ src/components/ui/card.tsx. العنوان CardTitle ثم الوصف ثم المحتوى. لا تضبط اتجاهًا يدويًا — يرث rtl."
+    },
+    {
+      "name": "badge",
+      "titleAr": "شارة حالة",
+      "titleEn": "Badge",
+      "descriptionAr": "شارات الحالات (مدفوع/مسودة/متأخر) بألوان دلالية فاتح/داكن.",
+      "category": "ui",
+      "dependencies": [],
+      "files": [{ "path": "src/components/ui/badge.tsx", "type": "component" }],
+      "usage": "import { Badge } from \"@/components/ui/badge\";\n\n<div className=\"flex gap-2\">\n  <Badge variant=\"success\">مدفوع</Badge>\n  <Badge variant=\"warning\">قيد المراجعة</Badge>\n  <Badge variant=\"destructive\">متأخر</Badge>\n</div>",
+      "prompt": "استخدم Badge للحالات: success=مدفوع/نشط، warning=قيد المراجعة، destructive=متأخر/محذوف. انسخ src/components/ui/badge.tsx."
+    },
+    {
+      "name": "alert",
+      "titleAr": "تنبيه",
+      "titleEn": "Alert",
+      "descriptionAr": "تنبيهات دلالية بأيقونة تلقائية (نجاح/تحذير/خطأ/معلومة).",
+      "category": "ui",
+      "dependencies": ["lucide-react"],
+      "files": [{ "path": "src/components/ui/alert.tsx", "type": "component" }],
+      "usage": "import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\";\n\n<Alert variant=\"success\">\n  <AlertTitle>تم الحفظ بنجاح</AlertTitle>\n  <AlertDescription>تم تحديث بيانات العميل.</AlertDescription>\n</Alert>",
+      "prompt": "أضف تنبيهًا عربيًا: انسخ src/components/ui/alert.tsx. اختر variant حسب الدلالة. الأيقونة تُرسم تلقائيًا."
+    },
+    {
+      "name": "tabs",
+      "titleAr": "تبويبات",
+      "titleEn": "Tabs",
+      "descriptionAr": "تبويبات Radix تنعكس تلقائيًا في RTL — للملفات والتصنيفات.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-tabs"],
+      "files": [{ "path": "src/components/ui/tabs.tsx", "type": "component" }],
+      "usage": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\n<Tabs defaultValue=\"overview\">\n  <TabsList>\n    <TabsTrigger value=\"overview\">نظرة عامة</TabsTrigger>\n    <TabsTrigger value=\"orders\">الطلبات</TabsTrigger>\n  </TabsList>\n  <TabsContent value=\"overview\">محتوى النظرة العامة</TabsContent>\n  <TabsContent value=\"orders\">قائمة الطلبات</TabsContent>\n</Tabs>",
+      "prompt": "أضف تبويبات: انسخ src/components/ui/tabs.tsx. أول TabsTrigger يمينًا تلقائيًا في RTL — لا تعكس الترتيب يدويًا."
+    },
+    {
+      "name": "table",
+      "titleAr": "جدول بيانات",
+      "titleEn": "Table",
+      "descriptionAr": "جدول عربي: أول عمود يمينًا تلقائيًا، والأرقام tnum. استخدم Badge داخل الخلايا للحالات.",
+      "category": "ui",
+      "dependencies": [],
+      "files": [{ "path": "src/components/ui/table.tsx", "type": "component" }],
+      "usage": "import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\";\n\n<Table>\n  <TableHeader>\n    <TableRow><TableHead>العميل</TableHead><TableHead>الحالة</TableHead><TableHead>المبلغ</TableHead></TableRow>\n  </TableHeader>\n  <TableBody>\n    <TableRow><TableCell>أحمد محمود</TableCell><TableCell>مدفوع</TableCell><TableCell>١٬٢٥٠ ج.م</TableCell></TableRow>\n  </TableBody>\n</Table>",
+      "prompt": "ابنِ جدولًا عربيًا: انسخ src/components/ui/table.tsx. استخدم TableHead بـ text-start (تلقائي). الأرقام والمبالغ داخل TableCell (tnum مدمج). الحالات عبر Badge."
+    },
+    {
+      "name": "avatar",
+      "titleAr": "صورة رمزية",
+      "titleEn": "Avatar",
+      "descriptionAr": "أفاتار دائري مع fallback بالأحرف الأولى العربية.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-avatar"],
+      "files": [{ "path": "src/components/ui/avatar.tsx", "type": "component" }],
+      "usage": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\n<div className=\"flex items-center gap-3\">\n  <Avatar><AvatarFallback>أم</AvatarFallback></Avatar>\n  <div><p className=\"text-sm font-bold\">أحمد محمود</p></div>\n</div>",
+      "prompt": "أضف أفاتار: انسخ src/components/ui/avatar.tsx. الـ fallback بالأحرف الأولى العربية (مثال: أم)."
+    },
+    {
+      "name": "separator",
+      "titleAr": "فاصل",
+      "titleEn": "Separator",
+      "descriptionAr": "خط فاصل أفقي/رأسي لأقسام الصفحات العربية.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-separator"],
+      "files": [{ "path": "src/components/ui/separator.tsx", "type": "component" }],
+      "usage": "import { Separator } from \"@/components/ui/separator\";\n\n<p className=\"font-bold\">الملف الشخصي</p>\n<Separator className=\"my-3\" />\n<p className=\"text-sm text-muted-foreground\">التفاصيل</p>",
+      "prompt": "أضف فاصلًا: انسخ src/components/ui/separator.tsx. أفقي افتراضيًا."
+    },
+    {
+      "name": "switch",
+      "titleAr": "مفتاح تبديل",
+      "titleEn": "Switch",
+      "descriptionAr": "مفتاح on/off تنعكس حركة مقبضه تلقائيًا في RTL.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-switch"],
+      "files": [{ "path": "src/components/ui/switch.tsx", "type": "component" }],
+      "usage": "\"use client\";\nimport { Switch } from \"@/components/ui/switch\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"flex items-center gap-2\">\n  <Switch id=\"notif\" defaultChecked />\n  <Label htmlFor=\"notif\">تفعيل الإشعارات</Label>\n</div>",
+      "prompt": "أضف Switch: انسخ src/components/ui/switch.tsx. يتطلب \"use client\". اربطه بـ Label."
+    },
+    {
+      "name": "checkbox",
+      "titleAr": "مربع اختيار",
+      "titleEn": "Checkbox",
+      "descriptionAr": "مربع اختيار Radix للموافقات والمهام — يُستخدم مع Label.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+      "files": [{ "path": "src/components/ui/checkbox.tsx", "type": "component" }],
+      "usage": "\"use client\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"flex items-center gap-2\">\n  <Checkbox id=\"agree\" />\n  <Label htmlFor=\"agree\">أوافق على الشروط</Label>\n</div>",
+      "prompt": "أضف Checkbox: انسخ src/components/ui/checkbox.tsx. يتطلب \"use client\"."
+    },
+    {
+      "name": "dialog",
+      "titleAr": "نافذة حوارية",
+      "titleEn": "Dialog",
+      "descriptionAr": "نافذة منبثقة — زر الإغلاق على الطرف الصحيح في RTL (end) تلقائيًا.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
+      "files": [{ "path": "src/components/ui/dialog.tsx", "type": "component" }],
+      "usage": "\"use client\";\nimport { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\";\nimport { Button } from \"@/components/ui/button\";\n\n<Dialog>\n  <DialogTrigger asChild><Button variant=\"outline\">فتح النافذة</Button></DialogTrigger>\n  <DialogContent>\n    <DialogHeader><DialogTitle>تأكيد الحذف</DialogTitle>\n    <DialogDescription>هل أنت متأكد؟ لا يمكن التراجع.</DialogDescription></DialogHeader>\n    <Button variant=\"destructive\">حذف</Button>\n  </DialogContent>\n</Dialog>",
+      "prompt": "أضف Dialog: انسخ src/components/ui/dialog.tsx. يتطلب \"use client\". زر الإغلاق end تلقائيًا — لا تنقله. أزرار التأكيد تبدأ من اليمين في RTL."
+    },
+    {
+      "name": "dropdown-menu",
+      "titleAr": "قائمة منسدلة",
+      "titleEn": "Dropdown Menu",
+      "descriptionAr": "قائمة إجراءات (تعديل/حذف/مشاركة) بمحاذاة RTL تلقائية.",
+      "category": "ui",
+      "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react"],
+      "files": [{ "path": "src/components/ui/dropdown-menu.tsx", "type": "component" }],
+      "usage": "\"use client\";\nimport { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from \"@/components/ui/dropdown-menu\";\nimport { Button } from \"@/components/ui/button\";\n\n<DropdownMenu>\n  <DropdownMenuTrigger asChild><Button variant=\"outline\">خيارات</Button></DropdownMenuTrigger>\n  <DropdownMenuContent>\n    <DropdownMenuItem>تعديل</DropdownMenuItem>\n    <DropdownMenuItem>مشاركة</DropdownMenuItem>\n    <DropdownMenuItem>حذف</DropdownMenuItem>\n  </DropdownMenuContent>\n</DropdownMenu>",
+      "prompt": "أضف DropdownMenu: انسخ src/components/ui/dropdown-menu.tsx. يتطلب \"use client\"."
+    },
+    {
+      "name": "stats-card",
+      "titleAr": "بطاقة مؤشر KPI",
+      "titleEn": "Stats Card",
+      "descriptionAr": "بطاقة مؤشر عربية (قيمة + نسبة تغير + أيقونة) — لبنة لوحات التحكم.",
+      "category": "titans",
+      "dependencies": ["lucide-react"],
+      "files": [
+        { "path": "src/components/titans/stats-card.tsx", "type": "component" },
+        { "path": "src/components/ui/card.tsx", "type": "component" },
+        { "path": "src/components/ui/badge.tsx", "type": "component" }
+      ],
+      "usage": "import { StatsCard } from \"@/components/titans/stats-card\";\nimport { Users } from \"lucide-react\";\n\n<div className=\"grid gap-4 md:grid-cols-3\">\n  <StatsCard title=\"إجمالي المستخدمين\" value=\"١٢٬٤٥٠\" change=\"+12%\" trend=\"up\" icon={<Users />} />\n  <StatsCard title=\"الإيرادات\" value=\"٤٥٬٢٠٠ ج.م\" change=\"+8%\" trend=\"up\" />\n  <StatsCard title=\"الطلبات النشطة\" value=\"٣٢٠\" change=\"-3%\" trend=\"down\" />\n</div>",
+      "prompt": "أضف بطاقات KPI: انسخ stats-card + card + badge. trend يحدد اللون (up أخضر، down أحمر). القيم tnum تلقائيًا."
+    },
+    {
+      "name": "auth-card",
+      "titleAr": "بطاقة تسجيل دخول",
+      "titleEn": "Auth Card",
+      "descriptionAr": "حاوية مصادقة ممركزة (دخول/تسجيل/OTP) — ضع <form> داخلها.",
+      "category": "titans",
+      "dependencies": [],
+      "files": [
+        { "path": "src/components/titans/auth-card.tsx", "type": "component" },
+        { "path": "src/components/ui/card.tsx", "type": "component" }
+      ],
+      "usage": "import { AuthCard } from \"@/components/titans/auth-card\";\nimport { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\n\n<AuthCard title=\"تسجيل الدخول\" description=\"مرحبًا بعودتك\" logo=\"T\">\n  <Input placeholder=\"البريد الإلكتروني\" />\n  <Input type=\"password\" placeholder=\"كلمة المرور\" />\n  <Button className=\"w-full\">دخول</Button>\n</AuthCard>",
+      "prompt": "ابنِ شاشة دخول: انسخ auth-card + card + input + button. ضع الحقول داخل AuthCard children."
+    },
+    {
+      "name": "dashboard-shell",
+      "titleAr": "هيكل لوحة تحكم",
+      "titleEn": "Dashboard Shell",
+      "descriptionAr": "حاوية لوحة تحكم عربية (عنوان + وصف + إجراءات + شبكة محتوى).",
+      "category": "titans",
+      "dependencies": [],
+      "files": [
+        { "path": "src/components/titans/dashboard-shell.tsx", "type": "component" },
+        { "path": "src/components/titans/page-header.tsx", "type": "component" }
+      ],
+      "usage": "import { DashboardShell } from \"@/components/titans/dashboard-shell\";\nimport { StatsCard } from \"@/components/titans/stats-card\";\n\n<DashboardShell title=\"لوحة التحكم الرئيسية\" description=\"نظرة عامة على نشاط اليوم\">\n  <div className=\"grid gap-4 md:grid-cols-3\">\n    <StatsCard title=\"المستخدمون\" value=\"١٢٬٤٥٠\" change=\"+12%\" trend=\"up\" />\n  </div>\n</DashboardShell>",
+      "prompt": "ابنِ لوحة تحكم: انسخ dashboard-shell + page-header. مرر title/description/actions ثم شبكة StatsCard/Table كـ children."
+    },
+    {
+      "name": "empty-state",
+      "titleAr": "حالة فارغة",
+      "titleEn": "Empty State",
+      "descriptionAr": "حالة عدم وجود بيانات (أيقونة + عنوان + زر إجراء) — للجداول والقوائم الفارغة.",
+      "category": "titans",
+      "dependencies": ["lucide-react"],
+      "files": [{ "path": "src/components/titans/empty-state.tsx", "type": "component" }],
+      "usage": "import { EmptyState } from \"@/components/titans/empty-state\";\nimport { Button } from \"@/components/ui/button\";\nimport { Inbox } from \"lucide-react\";\n\n<EmptyState icon={<Inbox />} title=\"لا توجد بيانات بعد\" description=\"ابدأ بإضافة أول عميل.\" action={<Button>إضافة عميل</Button>} />",
+      "prompt": "أضف EmptyState للقوائم الفارغة: انسخ src/components/titans/empty-state.tsx. مرر icon/title/description/action."
+    },
+    {
+      "name": "page-header",
+      "titleAr": "ترويسة صفحة",
+      "titleEn": "Page Header",
+      "descriptionAr": "ترويسة (عنوان + وصف + أزرار) بمحاذاة RTL — تُستخدم داخل DashboardShell.",
+      "category": "titans",
+      "dependencies": [],
+      "files": [{ "path": "src/components/titans/page-header.tsx", "type": "component" }],
+      "usage": "import { PageHeader } from \"@/components/titans/page-header\";\nimport { Button } from \"@/components/ui/button\";\n\n<PageHeader title=\"إدارة العملاء\" description=\"٣٢٠ عميل نشط\" actions={<Button>عميل جديد</Button>} />",
+      "prompt": "أضف PageHeader أعلى الصفحة: انسخ src/components/titans/page-header.tsx. العنوان يمينًا والأزرار تُحاذى تلقائيًا."
+    }
+  ]
+}

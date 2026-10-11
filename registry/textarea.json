@@ -1,0 +1,16 @@
+{
+  "name": "textarea",
+  "titleAr": "منطقة نصية",
+  "titleEn": "Textarea",
+  "descriptionAr": "حقل نص متعدد الأسطر للملاحظات والوصف بالعربية.",
+  "category": "ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Textarea } from \"@/components/ui/textarea\";\n\n<Textarea placeholder=\"اكتب ملاحظاتك هنا…\" />",
+  "prompt": "أضف textarea عربي: انسخ src/components/ui/textarea.tsx. نفس قواعد input للاتجاه."
+}

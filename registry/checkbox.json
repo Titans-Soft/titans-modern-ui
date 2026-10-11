@@ -1,0 +1,19 @@
+{
+  "name": "checkbox",
+  "titleAr": "مربع اختيار",
+  "titleEn": "Checkbox",
+  "descriptionAr": "مربع اختيار Radix للموافقات والمهام — يُستخدم مع Label.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "\"use client\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"flex items-center gap-2\">\n  <Checkbox id=\"agree\" />\n  <Label htmlFor=\"agree\">أوافق على الشروط</Label>\n</div>",
+  "prompt": "أضف Checkbox: انسخ src/components/ui/checkbox.tsx. يتطلب \"use client\"."
+}

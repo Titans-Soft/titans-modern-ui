@@ -1,0 +1,38 @@
+# titans-modern-ui — llms.txt
+
+> Titansoft internal Arabic-first UI library (Next.js + shadcn/ui, RTL-native).
+> Agents: read AGENTS.md, then registry.json. Reply in Arabic for UI copy, English for code comments when helpful.
+
+## Quick start for agents
+
+1. Read `/AGENTS.md` (rules) and `/registry.json` (index of 20 items).
+2. Fetch `/r/<name>.json` for each needed component (files + usage + prompt).
+3. Copy files to identical paths; always include `src/lib/utils.ts` (cn).
+4. Wrap with `<TitanProvider defaultDirection="rtl">`, `<html lang="ar" dir="rtl">`, `font-cairo`.
+
+## Index
+
+- Docs home: `/` · Setup: `/getting-started` · Fonts: `/fonts` · Themes: `/themes`
+- Screens: `/screens` (auth, dashboard, empty) · Prompts: `/prompts`
+- Components: `/components` → `/components/<slug>` per item
+- Machine index: `/r/index.json` · Per item: `/r/<name>.json`
+
+## Component slugs
+
+button, input, textarea, label, card, badge, alert, tabs, table, avatar, separator, switch, checkbox, dialog, dropdown-menu, stats-card, auth-card, dashboard-shell, empty-state, page-header
+
+## Hard rules
+
+- RTL default; logical props only (start/end, ps/pe, gap). No ml/mr, text-left, space-x.
+- Directional icons get `flip-rtl`. Numbers/KPIs get `tnum`.
+- Fonts: cairo (default), tajawal, plex-arabic, alexandria, almarai, kufi.
+- Themes: titans, oasis, sand, midnight, plum (+ light/dark via next-themes).
+- shadcn contract: className via cn(), cva variants, RSC by default.
+
+## Prompts
+
+- use-component: build a screen from existing items.
+- new-component: scaffold to this standard + registry entry.
+- rtl-review: audit for ml/mr, left/right, icon mirroring, dir misuse.
+- screen-builder: full auth/dashboard/table page.
+- Full text: `/prompts` and `prompts/*.md`.

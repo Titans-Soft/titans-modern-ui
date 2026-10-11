@@ -1,0 +1,20 @@
+{
+  "name": "dashboard-shell",
+  "titleAr": "هيكل لوحة تحكم",
+  "titleEn": "Dashboard Shell",
+  "descriptionAr": "حاوية لوحة تحكم عربية (عنوان + وصف + إجراءات + شبكة محتوى).",
+  "category": "titans",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/titans/dashboard-shell.tsx",
+      "type": "component"
+    },
+    {
+      "path": "src/components/titans/page-header.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { DashboardShell } from \"@/components/titans/dashboard-shell\";\nimport { StatsCard } from \"@/components/titans/stats-card\";\n\n<DashboardShell title=\"لوحة التحكم الرئيسية\" description=\"نظرة عامة على نشاط اليوم\">\n  <div className=\"grid gap-4 md:grid-cols-3\">\n    <StatsCard title=\"المستخدمون\" value=\"١٢٬٤٥٠\" change=\"+12%\" trend=\"up\" />\n  </div>\n</DashboardShell>",
+  "prompt": "ابنِ لوحة تحكم: انسخ dashboard-shell + page-header. مرر title/description/actions ثم شبكة StatsCard/Table كـ children."
+}

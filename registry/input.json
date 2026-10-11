@@ -1,0 +1,16 @@
+{
+  "name": "input",
+  "titleAr": "حقل إدخال",
+  "titleEn": "Input",
+  "descriptionAr": "حقل نصي RTL-native — العربي يمين تلقائيًا، واللاتيني (إيميل) أضف dir=\"ltr\".",
+  "category": "ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/input.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"space-y-1.5\">\n  <Label>الاسم الكامل</Label>\n  <Input placeholder=\"مثال: أحمد محمود\" />\n</div>\n<div className=\"space-y-1.5\">\n  <Label>البريد الإلكتروني</Label>\n  <Input dir=\"ltr\" className=\"text-left\" placeholder=\"name@titansoft.eg\" />\n</div>",
+  "prompt": "أضف حقل input عربي: انسخ src/components/ui/input.tsx. الحقول العربية بدون dir إضافي (ترث rtl). حقول الإيميل/الروابط أضف dir=\"ltr\" className=\"text-left\". اربط كل حقل بـ Label عبر htmlFor."
+}

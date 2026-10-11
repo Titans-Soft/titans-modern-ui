@@ -1,0 +1,18 @@
+{
+  "name": "avatar",
+  "titleAr": "صورة رمزية",
+  "titleEn": "Avatar",
+  "descriptionAr": "أفاتار دائري مع fallback بالأحرف الأولى العربية.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/avatar.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\n<div className=\"flex items-center gap-3\">\n  <Avatar><AvatarFallback>أم</AvatarFallback></Avatar>\n  <div><p className=\"text-sm font-bold\">أحمد محمود</p></div>\n</div>",
+  "prompt": "أضف أفاتار: انسخ src/components/ui/avatar.tsx. الـ fallback بالأحرف الأولى العربية (مثال: أم)."
+}

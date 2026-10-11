@@ -1,0 +1,18 @@
+{
+  "name": "separator",
+  "titleAr": "فاصل",
+  "titleEn": "Separator",
+  "descriptionAr": "خط فاصل أفقي/رأسي لأقسام الصفحات العربية.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-separator"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/separator.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Separator } from \"@/components/ui/separator\";\n\n<p className=\"font-bold\">الملف الشخصي</p>\n<Separator className=\"my-3\" />\n<p className=\"text-sm text-muted-foreground\">التفاصيل</p>",
+  "prompt": "أضف فاصلًا: انسخ src/components/ui/separator.tsx. أفقي افتراضيًا."
+}

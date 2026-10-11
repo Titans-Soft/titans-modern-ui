@@ -1,0 +1,18 @@
+{
+  "name": "empty-state",
+  "titleAr": "حالة فارغة",
+  "titleEn": "Empty State",
+  "descriptionAr": "حالة عدم وجود بيانات (أيقونة + عنوان + زر إجراء) — للجداول والقوائم الفارغة.",
+  "category": "titans",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/titans/empty-state.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { EmptyState } from \"@/components/titans/empty-state\";\nimport { Button } from \"@/components/ui/button\";\nimport { Inbox } from \"lucide-react\";\n\n<EmptyState icon={<Inbox />} title=\"لا توجد بيانات بعد\" description=\"ابدأ بإضافة أول عميل.\" action={<Button>إضافة عميل</Button>} />",
+  "prompt": "أضف EmptyState للقوائم الفارغة: انسخ src/components/titans/empty-state.tsx. مرر icon/title/description/action."
+}

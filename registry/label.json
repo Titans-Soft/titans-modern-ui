@@ -1,0 +1,18 @@
+{
+  "name": "label",
+  "titleAr": "تسمية حقل",
+  "titleEn": "Label",
+  "descriptionAr": "تسمية Radix تربط الحقول بـ htmlFor — أساس نماذج عربية ميسّرة.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-label"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/label.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Label } from \"@/components/ui/label\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\n\n<div className=\"flex items-center gap-2\">\n  <Checkbox id=\"terms\" />\n  <Label htmlFor=\"terms\">أوافق على الشروط والأحكام</Label>\n</div>",
+  "prompt": "استخدم Label مع كل input عبر htmlFor/id. انسخ src/components/ui/label.tsx."
+}

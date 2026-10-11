@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════ Titans Modern UI — shadcn CSS variables (RTL-native) ═══════════ */
+@layer base {
+  :root,
+  .theme-titans {
+    --background: 0 0% 100%;
+    --foreground: 232 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 232 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 30% 12%;
+    --primary: 245 100% 68%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 232 30% 96%;
+    --secondary-foreground: 232 30% 18%;
+    --muted: 232 20% 96%;
+    --muted-foreground: 232 12% 45%;
+    --accent: 187 92% 53%;
+    --accent-foreground: 232 30% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 232 20% 90%;
+    --input: 232 20% 90%;
+    --ring: 245 100% 68%;
+    --radius: 0.75rem;
+  }
+
+  .dark,
+  .dark.theme-titans {
+    --background: 232 35% 8%;
+    --foreground: 0 0% 98%;
+    --card: 232 30% 11%;
+    --card-foreground: 0 0% 98%;
+    --popover: 232 30% 11%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 245 100% 72%;
+    --primary-foreground: 232 35% 8%;
+    --secondary: 232 25% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 232 25% 16%;
+    --muted-foreground: 232 12% 65%;
+    --accent: 187 92% 53%;
+    --accent-foreground: 232 35% 8%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 232 25% 18%;
+    --input: 232 25% 18%;
+    --ring: 245 100% 72%;
+  }
+
+  /* ── Oasis (emerald) ── */
+  .theme-oasis {
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 84 81% 44%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 160 84% 39%;
+  }
+  .dark.theme-oasis {
+    --background: 160 30% 7%;
+    --card: 160 25% 10%;
+    --popover: 160 25% 10%;
+    --primary: 160 84% 45%;
+    --accent: 84 81% 55%;
+    --border: 160 20% 16%;
+    --input: 160 20% 16%;
+  }
+
+  /* ── Sand (warm amber) ── */
+  .theme-sand {
+    --background: 48 100% 97%;
+    --primary: 32 95% 44%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 28 80% 35%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 32 95% 44%;
+    --radius: 0.625rem;
+  }
+  .dark.theme-sand {
+    --background: 24 25% 8%;
+    --card: 24 22% 11%;
+    --popover: 24 22% 11%;
+    --primary: 32 95% 55%;
+    --accent: 32 95% 55%;
+    --border: 24 20% 18%;
+    --input: 24 20% 18%;
+  }
+
+  /* ── Midnight (dark-first blue) ── */
+  .theme-midnight {
+    --background: 222 47% 97%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 231 97% 72%;
+    --ring: 199 89% 48%;
+  }
+  .dark.theme-midnight,
+  .theme-midnight.dark {
+    --background: 222 47% 6%;
+    --card: 222 40% 9%;
+    --popover: 222 40% 9%;
+    --primary: 199 89% 60%;
+    --accent: 231 97% 75%;
+    --border: 222 30% 16%;
+    --input: 222 30% 16%;
+  }
+
+  /* ── Plum (violet/pink) ── */
+  .theme-plum {
+    --primary: 271 81% 56%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 330 81% 60%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 271 81% 56%;
+  }
+  .dark.theme-plum {
+    --background: 272 35% 8%;
+    --card: 272 30% 11%;
+    --popover: 272 30% 11%;
+    --primary: 271 81% 65%;
+    --accent: 330 81% 65%;
+    --border: 272 25% 18%;
+    --input: 272 25% 18%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  /* RTL-first: mirror common LTR assumptions */
+  [dir="rtl"] .flip-rtl {
+    transform: scaleX(-1);
+  }
+  /* Numeric / latin runs inside Arabic text */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Thin scrollbars for docs sidebar */
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-border;
+  }
+}

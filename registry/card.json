@@ -1,0 +1,16 @@
+{
+  "name": "card",
+  "titleAr": "بطاقة",
+  "titleEn": "Card",
+  "descriptionAr": "حاوية shadcn (Header/Title/Description/Content/Footer) — لبنة النماذج ولوحات العرض.",
+  "category": "ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/card.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Input } from \"@/components/ui/input\";\nimport { Button } from \"@/components/ui/button\";\n\n<Card className=\"max-w-sm\">\n  <CardHeader>\n    <CardTitle>تسجيل الدخول</CardTitle>\n    <CardDescription>أدخل بياناتك للمتابعة</CardDescription>\n  </CardHeader>\n  <CardContent className=\"space-y-3\">\n    <Input placeholder=\"البريد الإلكتروني\" />\n    <Button className=\"w-full\">دخول</Button>\n  </CardContent>\n</Card>",
+  "prompt": "ابنِ بطاقة عربية: انسخ src/components/ui/card.tsx. العنوان CardTitle ثم الوصف ثم المحتوى. لا تضبط اتجاهًا يدويًا — يرث rtl."
+}

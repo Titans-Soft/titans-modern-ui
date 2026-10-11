@@ -1,0 +1,6 @@
+# Titans Modern UI — Cursor rules
+# Arabic-first shadcn/ui library. Read AGENTS.md + registry.json before generating UI.
+# - html lang=ar dir=rtl by default; logical props only (start/end, ps/pe, gap)
+# - Banned: ml-*, mr-*, left-*, right-*, text-left, text-right, space-x-*
+# - Directional icons: flip-rtl. Numbers: tnum. Default font: font-cairo.
+# - Copy files from registry/<name>.json to identical paths; always include src/lib/utils.ts.

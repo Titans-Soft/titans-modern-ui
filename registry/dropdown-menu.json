@@ -1,0 +1,19 @@
+{
+  "name": "dropdown-menu",
+  "titleAr": "قائمة منسدلة",
+  "titleEn": "Dropdown Menu",
+  "descriptionAr": "قائمة إجراءات (تعديل/حذف/مشاركة) بمحاذاة RTL تلقائية.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/dropdown-menu.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "\"use client\";\nimport { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from \"@/components/ui/dropdown-menu\";\nimport { Button } from \"@/components/ui/button\";\n\n<DropdownMenu>\n  <DropdownMenuTrigger asChild><Button variant=\"outline\">خيارات</Button></DropdownMenuTrigger>\n  <DropdownMenuContent>\n    <DropdownMenuItem>تعديل</DropdownMenuItem>\n    <DropdownMenuItem>مشاركة</DropdownMenuItem>\n    <DropdownMenuItem>حذف</DropdownMenuItem>\n  </DropdownMenuContent>\n</DropdownMenu>",
+  "prompt": "أضف DropdownMenu: انسخ src/components/ui/dropdown-menu.tsx. يتطلب \"use client\"."
+}

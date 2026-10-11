@@ -1,0 +1,26 @@
+{
+  "name": "stats-card",
+  "titleAr": "بطاقة مؤشر KPI",
+  "titleEn": "Stats Card",
+  "descriptionAr": "بطاقة مؤشر عربية (قيمة + نسبة تغير + أيقونة) — لبنة لوحات التحكم.",
+  "category": "titans",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/titans/stats-card.tsx",
+      "type": "component"
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "type": "component"
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { StatsCard } from \"@/components/titans/stats-card\";\nimport { Users } from \"lucide-react\";\n\n<div className=\"grid gap-4 md:grid-cols-3\">\n  <StatsCard title=\"إجمالي المستخدمين\" value=\"١٢٬٤٥٠\" change=\"+12%\" trend=\"up\" icon={<Users />} />\n  <StatsCard title=\"الإيرادات\" value=\"٤٥٬٢٠٠ ج.م\" change=\"+8%\" trend=\"up\" />\n  <StatsCard title=\"الطلبات النشطة\" value=\"٣٢٠\" change=\"-3%\" trend=\"down\" />\n</div>",
+  "prompt": "أضف بطاقات KPI: انسخ stats-card + card + badge. trend يحدد اللون (up أخضر، down أحمر). القيم tnum تلقائيًا."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "switch",
+  "titleAr": "مفتاح تبديل",
+  "titleEn": "Switch",
+  "descriptionAr": "مفتاح on/off تنعكس حركة مقبضه تلقائيًا في RTL.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/switch.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "\"use client\";\nimport { Switch } from \"@/components/ui/switch\";\nimport { Label } from \"@/components/ui/label\";\n\n<div className=\"flex items-center gap-2\">\n  <Switch id=\"notif\" defaultChecked />\n  <Label htmlFor=\"notif\">تفعيل الإشعارات</Label>\n</div>",
+  "prompt": "أضف Switch: انسخ src/components/ui/switch.tsx. يتطلب \"use client\". اربطه بـ Label."
+}

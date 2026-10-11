@@ -1,0 +1,19 @@
+{
+  "name": "dialog",
+  "titleAr": "نافذة حوارية",
+  "titleEn": "Dialog",
+  "descriptionAr": "نافذة منبثقة — زر الإغلاق على الطرف الصحيح في RTL (end) تلقائيًا.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-dialog",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "\"use client\";\nimport { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\";\nimport { Button } from \"@/components/ui/button\";\n\n<Dialog>\n  <DialogTrigger asChild><Button variant=\"outline\">فتح النافذة</Button></DialogTrigger>\n  <DialogContent>\n    <DialogHeader><DialogTitle>تأكيد الحذف</DialogTitle>\n    <DialogDescription>هل أنت متأكد؟ لا يمكن التراجع.</DialogDescription></DialogHeader>\n    <Button variant=\"destructive\">حذف</Button>\n  </DialogContent>\n</Dialog>",
+  "prompt": "أضف Dialog: انسخ src/components/ui/dialog.tsx. يتطلب \"use client\". زر الإغلاق end تلقائيًا — لا تنقله. أزرار التأكيد تبدأ من اليمين في RTL."
+}

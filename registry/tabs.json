@@ -1,0 +1,18 @@
+{
+  "name": "tabs",
+  "titleAr": "تبويبات",
+  "titleEn": "Tabs",
+  "descriptionAr": "تبويبات Radix تنعكس تلقائيًا في RTL — للملفات والتصنيفات.",
+  "category": "ui",
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\n<Tabs defaultValue=\"overview\">\n  <TabsList>\n    <TabsTrigger value=\"overview\">نظرة عامة</TabsTrigger>\n    <TabsTrigger value=\"orders\">الطلبات</TabsTrigger>\n  </TabsList>\n  <TabsContent value=\"overview\">محتوى النظرة العامة</TabsContent>\n  <TabsContent value=\"orders\">قائمة الطلبات</TabsContent>\n</Tabs>",
+  "prompt": "أضف تبويبات: انسخ src/components/ui/tabs.tsx. أول TabsTrigger يمينًا تلقائيًا في RTL — لا تعكس الترتيب يدويًا."
+}

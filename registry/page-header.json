@@ -1,0 +1,16 @@
+{
+  "name": "page-header",
+  "titleAr": "ترويسة صفحة",
+  "titleEn": "Page Header",
+  "descriptionAr": "ترويسة (عنوان + وصف + أزرار) بمحاذاة RTL — تُستخدم داخل DashboardShell.",
+  "category": "titans",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/titans/page-header.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { PageHeader } from \"@/components/titans/page-header\";\nimport { Button } from \"@/components/ui/button\";\n\n<PageHeader title=\"إدارة العملاء\" description=\"٣٢٠ عميل نشط\" actions={<Button>عميل جديد</Button>} />",
+  "prompt": "أضف PageHeader أعلى الصفحة: انسخ src/components/titans/page-header.tsx. العنوان يمينًا والأزرار تُحاذى تلقائيًا."
+}

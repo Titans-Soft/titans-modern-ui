@@ -1,0 +1,16 @@
+{
+  "name": "table",
+  "titleAr": "جدول بيانات",
+  "titleEn": "Table",
+  "descriptionAr": "جدول عربي: أول عمود يمينًا تلقائيًا، والأرقام tnum. استخدم Badge داخل الخلايا للحالات.",
+  "category": "ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/table.tsx",
+      "type": "component"
+    }
+  ],
+  "usage": "import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\";\n\n<Table>\n  <TableHeader>\n    <TableRow><TableHead>العميل</TableHead><TableHead>الحالة</TableHead><TableHead>المبلغ</TableHead></TableRow>\n  </TableHeader>\n  <TableBody>\n    <TableRow><TableCell>أحمد محمود</TableCell><TableCell>مدفوع</TableCell><TableCell>١٬٢٥٠ ج.م</TableCell></TableRow>\n  </TableBody>\n</Table>",
+  "prompt": "ابنِ جدولًا عربيًا: انسخ src/components/ui/table.tsx. استخدم TableHead بـ text-start (تلقائي). الأرقام والمبالغ داخل TableCell (tnum مدمج). الحالات عبر Badge."
+}
